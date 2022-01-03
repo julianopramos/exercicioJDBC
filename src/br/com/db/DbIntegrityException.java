@@ -1,4 +1,4 @@
-package db;
+package br.com.db;
 
 public class DbIntegrityException extends RuntimeException {
 
