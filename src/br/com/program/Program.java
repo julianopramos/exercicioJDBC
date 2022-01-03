@@ -39,11 +39,15 @@ public class Program {
 		sellerDao.insert(newSeller);
 		System.out.println("Inserido! Novo Vendedor cadastrado com ID: " + newSeller.getId() );
 		
-		System.out.println("=== Teste 4 - UpdateSeller ===");
+		System.out.println("=== Teste 5 - UpdateSeller ===");
 		newSeller = sellerDao.findById(1);
 		newSeller.setName("Martha Wayne");
 		sellerDao.update(newSeller);
 		System.out.println("Atualizado!");
+		
+		System.out.println("=== Teste 6 - Delete Seller ===");
+		sellerDao.deleteById(14);
+		System.out.println("Vendedor excluído com sucesso");
 		
 	}
 }
