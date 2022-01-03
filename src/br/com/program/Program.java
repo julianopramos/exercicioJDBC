@@ -1,5 +1,6 @@
 package br.com.program;
 
+import java.util.Date;
 import java.util.List;
 
 import br.com.model.entities.Department;
@@ -32,6 +33,11 @@ public class Program {
 		for(Seller s : sellers) {
 			System.out.println(s);
 		}
+		
+		System.out.println("=== Teste 4 - InsertSeller ===");
+		Seller newSeller = new Seller(null, "Greg", "greg@gmail.com", new Date(), 4000.0, department);
+		sellerDao.insert(newSeller);
+		System.out.println("Inserido! Novo Vendedor cadastrado com ID: " + newSeller.getId() );
 		
 	}
 }
